@@ -40,7 +40,7 @@ func origMain(isOptionSpecified bool) {
 	if !skipAviutlInstall {
 		success := pjsekaioverlay.TryInstallObject()
 		if success {
-			fmt.Println("AviUtlオブジェクトのインストールに成功しました。")
+			fmt.Println("AviUtlオブジェクトのインストールにSuccessしました。")
 		}
 	}
 
@@ -49,29 +49,29 @@ func origMain(isOptionSpecified bool) {
 		chartId = flag.Arg(0)
 		fmt.Printf("譜面ID: %s\n", color.GreenString(chartId))
 	} else {
-		fmt.Print("譜面IDをプレフィックス込みで入力して下さい。\n> ")
+		fmt.Print("Enter the chart ID including the prefix ('chcy-' for Chart Cyanvas and 'ptlv-' for Potato Leaves).\n> ")
 		fmt.Scanln(&chartId)
 		fmt.Printf("\033[A\033[2K\r> %s\n", color.GreenString(chartId))
 	}
 
 	chartSource, err := pjsekaioverlay.DetectChartSource(chartId)
 	if err != nil {
-		fmt.Println(color.RedString("譜面のサーバーを判別できませんでした。プレフィックスも込め、正しい譜面IDを入力して下さい。"))
+		fmt.Println(color.RedString("The specified ID doesn't exist. Please enter the correct chart ID including the prefix."))
 		return
 	}
-	fmt.Printf("%s%s%s から譜面を取得中... ", RgbColorEscape(chartSource.Color), chartSource.Name, ResetEscape())
+	fmt.Printf("Getting chart from %s%s%s... ", RgbColorEscape(chartSource.Color), chartSource.Name, ResetEscape())
 	chart, err := pjsekaioverlay.FetchChart(chartSource, chartId)
 
 	if err != nil {
-		fmt.Println(color.RedString(fmt.Sprintf("失敗：%s", err.Error())))
+		fmt.Println(color.RedString(fmt.Sprintf("Failed：%s", err.Error())))
 		return
 	}
 	if chart.Engine.Version != 10 {
-		fmt.Println(color.RedString(fmt.Sprintf("失敗：このエンジンはサポートされていません。（バージョン%d）", chart.Engine.Version)))
+		fmt.Println(color.RedString(fmt.Sprintf("Failed. This engine is not supported. （version %d）", chart.Engine.Version)))
 		return
 	}
 
-	fmt.Println(color.GreenString("成功"))
+	fmt.Println(color.GreenString("Success"))
 	fmt.Printf("  %s / %s - %s (Lv. %s)\n",
 		color.CyanString(chart.Title),
 		color.CyanString(chart.Artists),
@@ -79,73 +79,73 @@ func origMain(isOptionSpecified bool) {
 		color.MagentaString(strconv.Itoa(chart.Rating)),
 	)
 
-	fmt.Printf("exeのパスを取得中... ")
+	fmt.Printf("Getting exe path... ")
 	executablePath, err := os.Executable()
 	if err != nil {
-		fmt.Println(color.RedString(fmt.Sprintf("失敗：%s", err.Error())))
+		fmt.Println(color.RedString(fmt.Sprintf("Failed：%s", err.Error())))
 		return
 	}
 
-	fmt.Println(color.GreenString("成功"))
+	fmt.Println(color.GreenString("Success"))
 
 	cwd, err := os.Getwd()
 
 	if err != nil {
-		fmt.Println(color.RedString(fmt.Sprintf("失敗：%s", err.Error())))
+		fmt.Println(color.RedString(fmt.Sprintf("Failed：%s", err.Error())))
 		return
 	}
 
 	formattedOutDir := filepath.Join(cwd, strings.Replace(outDir, "_chartId_", chartId, -1))
-	fmt.Printf("出力先ディレクトリ: %s\n", color.CyanString(filepath.Dir(formattedOutDir)))
+	fmt.Printf("Output path: %s\n", color.CyanString(filepath.Dir(formattedOutDir)))
 
-	fmt.Print("ジャケットをダウンロード中... ")
+	fmt.Print("Downloading jacket... ")
 	err = pjsekaioverlay.DownloadCover(chartSource, chart, formattedOutDir)
 	if err != nil {
-		fmt.Println(color.RedString(fmt.Sprintf("失敗：%s", err.Error())))
+		fmt.Println(color.RedString(fmt.Sprintf("Failed：%s", err.Error())))
 		return
 	}
 
-	fmt.Println(color.GreenString("成功"))
+	fmt.Println(color.GreenString("Success"))
 
-	fmt.Print("背景をダウンロード中... ")
+	fmt.Print("Downloading background... ")
 	err = pjsekaioverlay.DownloadBackground(chartSource, chart, formattedOutDir)
 	if err != nil {
-		fmt.Println(color.RedString(fmt.Sprintf("失敗：%s", err.Error())))
+		fmt.Println(color.RedString(fmt.Sprintf("Failed：%s", err.Error())))
 		return
 	}
 
-	fmt.Println(color.GreenString("成功"))
+	fmt.Println(color.GreenString("Success"))
 
-	fmt.Print("譜面を解析中... ")
+	fmt.Print("Analyzing chart... ")
 	levelData, err := pjsekaioverlay.FetchLevelData(chartSource, chart)
 
 	if err != nil {
-		fmt.Println(color.RedString(fmt.Sprintf("失敗：%s", err.Error())))
+		fmt.Println(color.RedString(fmt.Sprintf("Failed：%s", err.Error())))
 		return
 	}
 
-	fmt.Println(color.GreenString("成功"))
+	fmt.Println(color.GreenString("Success"))
 
 	if !isOptionSpecified {
-		fmt.Print("総合力を指定してください。\n> ")
+		fmt.Print("Input your team's power.\n> ")
 		var tmpTeamPower string
 		fmt.Scanln(&tmpTeamPower)
 		teamPower, err = strconv.Atoi(tmpTeamPower)
 		if err != nil {
-			fmt.Println(color.RedString(fmt.Sprintf("失敗：%s", err.Error())))
+			fmt.Println(color.RedString(fmt.Sprintf("Failed：%s", err.Error())))
 			return
 		}
 		fmt.Printf("\033[A\033[2K\r> %s\n", color.GreenString(tmpTeamPower))
 
 	}
 
-	fmt.Print("スコアを計算中... ")
+	fmt.Print("Calculating score... ")
 	scoreData := pjsekaioverlay.CalculateScore(chart, levelData, teamPower)
 
-	fmt.Println(color.GreenString("成功"))
+	fmt.Println(color.GreenString("Success"))
 
 	if !isOptionSpecified {
-		fmt.Print("コンボのAP表示を有効にしますか？ (Y/n)\n> ")
+		fmt.Print("Would you like to enable AP indicator？ (Y/n)\n> ")
 		before, _ := rawmode.Enable()
 		tmpEnableComboApByte, _ := bufio.NewReader(os.Stdin).ReadByte()
 		tmpEnableComboAp := string(tmpEnableComboApByte)
@@ -160,31 +160,31 @@ func origMain(isOptionSpecified bool) {
 	executableDir := filepath.Dir(executablePath)
 	assets := filepath.Join(executableDir, "assets")
 
-	fmt.Print("pedファイルを生成中... ")
+	fmt.Print("Generating ped file... ")
 
 	err = pjsekaioverlay.WritePedFile(scoreData, assets, apCombo, filepath.Join(formattedOutDir, "data.ped"))
 
 	if err != nil {
-		fmt.Println(color.RedString(fmt.Sprintf("失敗：%s", err.Error())))
+		fmt.Println(color.RedString(fmt.Sprintf("Failed：%s", err.Error())))
 		return
 	}
 
-	fmt.Println(color.GreenString("成功"))
+	fmt.Println(color.GreenString("Success"))
 
-	fmt.Print("exoファイルを生成中... ")
+	fmt.Print("Generating exo file... ")
 
 	artists := fmt.Sprintf("作詞：？    作曲：%s    編曲：？\r\nVo：？   譜面作成：%s", chart.Artists, chart.Author)
 
 	err = pjsekaioverlay.WriteExoFiles(assets, formattedOutDir, chart.Title, artists)
 
 	if err != nil {
-		fmt.Println(color.RedString(fmt.Sprintf("失敗：%s", err.Error())))
+		fmt.Println(color.RedString(fmt.Sprintf("Failed：%s", err.Error())))
 		return
 	}
 
-	fmt.Println(color.GreenString("成功"))
+	fmt.Println(color.GreenString("Success"))
 
-	fmt.Println(color.GreenString("\n全ての処理が完了しました。exoファイルをAviUtlにインポートして下さい。"))
+	fmt.Println(color.GreenString("\nExecution complete. Import the exo file into AviUtl."))
 }
 
 func main() {
@@ -197,7 +197,7 @@ func main() {
 	origMain(isOptionSpecified)
 
 	if !isOptionSpecified {
-		fmt.Print(color.CyanString("\n何かキーを押すと終了します..."))
+		fmt.Print(color.CyanString("\nPress any key to exit..."))
 
 		before, _ := rawmode.Enable()
 		bufio.NewReader(os.Stdin).ReadByte()
