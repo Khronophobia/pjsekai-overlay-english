@@ -19,19 +19,19 @@ func origMain(isOptionSpecified bool) {
 	Title()
 
 	var skipAviutlInstall bool
-	flag.BoolVar(&skipAviutlInstall, "no-aviutl-install", false, "AviUtlオブジェクトのインストールをスキップします。")
+	flag.BoolVar(&skipAviutlInstall, "no-aviutl-install", false, "Skip installing AviUtl objects.")
 
 	var outDir string
-	flag.StringVar(&outDir, "out-dir", "./dist/_chartId_", "出力先ディレクトリを指定します。_chartId_ は譜面IDに置き換えられます。")
+	flag.StringVar(&outDir, "out-dir", "./dist/_chartId_", "Specify the output path. _chartId_ will be replaced with the chart ID.")
 
 	var teamPower int
-	flag.IntVar(&teamPower, "team-power", 250000, "総合力を指定します。")
+	flag.IntVar(&teamPower, "team-power", 250000, "Specify the team's power.")
 
 	var apCombo bool
-	flag.BoolVar(&apCombo, "ap-combo", true, "コンボのAP表示を有効にします。")
+	flag.BoolVar(&apCombo, "ap-combo", true, "Enable AP indicator.")
 
 	flag.Usage = func() {
-		fmt.Println("Usage: pjsekai-overlay [譜面ID] [オプション]")
+		fmt.Println("Usage: pjsekai-overlay [chart ID] [arguments]")
 		flag.PrintDefaults()
 	}
 
@@ -47,7 +47,7 @@ func origMain(isOptionSpecified bool) {
 	var chartId string
 	if flag.Arg(0) != "" {
 		chartId = flag.Arg(0)
-		fmt.Printf("譜面ID: %s\n", color.GreenString(chartId))
+		fmt.Printf("Chart ID: %s\n", color.GreenString(chartId))
 	} else {
 		fmt.Print("Enter the chart ID including the prefix ('chcy-' for Chart Cyanvas and 'ptlv-' for Potato Leaves).\n> ")
 		fmt.Scanln(&chartId)
@@ -56,7 +56,7 @@ func origMain(isOptionSpecified bool) {
 
 	chartSource, err := pjsekaioverlay.DetectChartSource(chartId)
 	if err != nil {
-		fmt.Println(color.RedString("The specified ID doesn't exist. Please enter the correct chart ID including the prefix."))
+		fmt.Println(color.RedString("The specified chart doesn't exist. Please enter the correct chart ID including the prefix."))
 		return
 	}
 	fmt.Printf("Getting chart from %s%s%s... ", RgbColorEscape(chartSource.Color), chartSource.Name, ResetEscape())
