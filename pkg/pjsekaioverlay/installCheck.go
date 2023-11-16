@@ -5,6 +5,7 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"slices"
 	"strings"
 
 	wapi "github.com/iamacarpet/go-win64api"
@@ -64,11 +65,15 @@ func TryInstallObject() bool {
 
 	var sekaiObjWriter = transform.NewWriter(sekaiObjFile, japanese.ShiftJIS.NewEncoder())
 
+	version_numbers := strings.Split(Version, ".")
+	og_version_numbers := slices.Delete(version_numbers, 3, len(version_numbers))
+	OGVersion := strings.Join(og_version_numbers, ".")
+
 	strings.NewReader(strings.NewReplacer(
 		"\r\n", "\r\n",
 		"\r", "\r\n",
 		"\n", "\r\n",
-		"{version}", Version,
+		"{version}", OGVersion,
 	).Replace(string(sekaiObj))).WriteTo(sekaiObjWriter)
 	return true
 }

@@ -4,8 +4,10 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"slices"
 	"sort"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/sevenc-nanashi/pjsekai-overlay/pkg/sonolus"
@@ -196,11 +198,15 @@ func WritePedFile(frames []PedFrame, assets string, ap bool, path string) error 
 	}
 	defer file.Close()
 
+	version_numbers := strings.Split(Version, ".")
+	og_version_numbers := slices.Delete(version_numbers, 3, len(version_numbers))
+	OGVersion := strings.Join(og_version_numbers, ".")
+
 	writer := io.Writer(file)
 
 	writer.Write([]byte(fmt.Sprintf("p|%s\n", assets)))
 	writer.Write([]byte(fmt.Sprintf("a|%s\n", strconv.FormatBool(ap))))
-	writer.Write([]byte(fmt.Sprintf("v|%s\n", Version)))
+	writer.Write([]byte(fmt.Sprintf("v|%s\n", OGVersion)))
 	writer.Write([]byte(fmt.Sprintf("u|%d\n", time.Now().Unix())))
 
 	lastScore := 0
