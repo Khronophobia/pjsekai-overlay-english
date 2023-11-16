@@ -40,7 +40,7 @@ func origMain(isOptionSpecified bool) {
 	if !skipAviutlInstall {
 		success := pjsekaioverlay.TryInstallObject()
 		if success {
-			fmt.Println("AviUtlオブジェクトのインストールにSuccessしました。")
+			fmt.Println("Successfully installed AviUtl object.")
 		}
 	}
 
