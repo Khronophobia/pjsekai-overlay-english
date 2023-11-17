@@ -31,7 +31,7 @@ func origMain(isOptionSpecified bool) {
 	flag.BoolVar(&apCombo, "ap-combo", true, "Enable AP indicator.")
 
 	var enUI bool
-	flag.BoolVar(&enUI, "en-ui", false, "Enable English UI.")
+	flag.BoolVar(&enUI, "en-ui", false, "Use English for the intro.")
 
 	flag.Usage = func() {
 		fmt.Println("Usage: pjsekai-overlay [chart ID] [arguments]")
@@ -148,7 +148,7 @@ func origMain(isOptionSpecified bool) {
 	fmt.Println(color.GreenString("Success"))
 
 	if !isOptionSpecified {
-		fmt.Print("Would you like to use English on the intro? (Y/n)\n> ")
+		fmt.Print("Would you like to use English for the intro? (Y/n)\n> ")
 		before, _ := rawmode.Enable()
 		tmpEnableENByte, _ := bufio.NewReader(os.Stdin).ReadByte()
 		tmpEnableEN := string(tmpEnableENByte)
