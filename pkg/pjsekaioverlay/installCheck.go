@@ -68,7 +68,7 @@ func TryInstallObject() bool {
 		"\r\n", "\r\n",
 		"\r", "\r\n",
 		"\n", "\r\n",
-		"{version}", ConvertENVersion(Version),
+		"{version}", GetVersion(Version, 0),
 	).Replace(string(sekaiObj))).WriteTo(sekaiObjWriter)
 	return true
 }

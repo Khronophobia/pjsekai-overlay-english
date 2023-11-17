@@ -1,15 +1,15 @@
 package pjsekaioverlay
 
 import (
-	"slices"
 	"strings"
 )
 
 const Version = "0.0.0"
 
-func ConvertENVersion(version string) string {
-	version_numbers := strings.Split(version, ".")
-	jp_version_numbers := slices.Delete(version_numbers, 3, len(version_numbers))
-	jp_version := strings.Join(jp_version_numbers, ".")
-	return jp_version
+func GetVersion(version string, index int) string {
+	versionGroup := []string{Version, "unknown version"}
+	if splitVersion := strings.Split(Version, "en"); len(splitVersion) == 2 {
+		versionGroup = []string{splitVersion[0], "v" + splitVersion[1]}
+	}
+	return versionGroup[index]
 }
