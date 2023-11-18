@@ -10,7 +10,7 @@ JP version follows Nanashi.'s original repo and will be updated when Nanashi. up
 
 ## Usage Guide
 
-Refer to [this guide that I made](https://github.com/Khronophobia/PJSekai-Overlay-English-Guide).
+Refer to the [wiki](https://github.com/Khronophobia/pjsekai-overlay-english/wiki).
 
 ## Note
 
