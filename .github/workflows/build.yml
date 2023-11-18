@@ -38,11 +38,11 @@ jobs:
       - name: Copy assets
         run: cp -r assets release/assets
       - name: Build zip
-        run: cd release && zip -r ../pjsekai-overlay.zip .
+        run: cd release && zip -r ../pjsekai-overlay-english.zip .
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           prerelease: ${{ steps.get_version.outputs.IS_PRERELEASE }}
           files: |
-            pjsekai-overlay.zip
+            pjsekai-overlay-english.zip
