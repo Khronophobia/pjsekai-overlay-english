@@ -1,4 +1,5 @@
 --version: {version}
+--enversion: {enversion}
 
 @設定
 --file:
@@ -76,27 +77,27 @@ else
   if PED_DATA.loaded == "not_found" then
     obj.load(
       "text",
-      "<s32,メイリオ,B>(! 読み込み失敗 !)\n<s>"..
-      "pedファイルが見付かりません！"
+      "<s32,メイリオ,B>(! ERROR !)\n<s>"..
+      "ped file not found!"
     )
   elseif PED_DATA.loaded == "invalid" then
     obj.load(
       "text",
-      "<s32,メイリオ,B>(! 読み込み失敗 !)\n<s>"..
-      "pedファイルを読み取れません！"
+      "<s32,メイリオ,B>(! ERROR !)\n<s>"..
+      "Can't read the ped file!"
     )
   elseif PED_DATA.version == nil then
     obj.load(
       "text",
-      "<s32,メイリオ,B>(! 読み込み失敗 !)\n<s>"..
-      "pedファイルのバージョンが設定されていません！"
+      "<s32,メイリオ,B>(! ERROR !)\n<s>"..
+      "ped file version is not set!"
     )
   else
     obj.load(
       "text",
-      "<s32,メイリオ,B>(! 読み込み失敗 !)\n<s>"..
-      "pedファイルとのバージョンが違います！\n"..
-      "オブジェクトファイルは{version}、pedファイルは"..PED_DATA.version.."です。"
+      "<s32,メイリオ,B>(! ERROR !)\n<s>"..
+      "pjsekai-overlay's version is different from ped!\n"..
+      "pjsekai-overlay is {version}, while ped is "..PED_DATA.version.."."
     )
   end
   obj.draw()
