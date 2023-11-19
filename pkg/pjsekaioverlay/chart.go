@@ -32,12 +32,12 @@ func FetchChart(source Source, chartId string) (sonolus.LevelInfo, error) {
 	resp, err := http.Get(url)
 
 	if err != nil {
-		return sonolus.LevelInfo{}, errors.New("サーバーに接続できませんでした。")
+		return sonolus.LevelInfo{}, errors.New("couldn't connect to the server")
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != 200 {
-		return sonolus.LevelInfo{}, errors.New("譜面が見つかりませんでした。")
+		return sonolus.LevelInfo{}, errors.New("no chart was found")
 	}
 
 	var chart sonolus.InfoResponse[sonolus.LevelInfo]
@@ -92,30 +92,30 @@ func FetchLevelData(source Source, level sonolus.LevelInfo) (sonolus.LevelData, 
 	url, err := sonolus.JoinUrl("https://"+source.Host, level.Data.Url)
 
 	if err != nil {
-		return sonolus.LevelData{}, fmt.Errorf("URLの解析に失敗しました。（%s）", err)
+		return sonolus.LevelData{}, fmt.Errorf("failed to parse URL. (%s)", err)
 	}
 
 	resp, err := http.Get(url)
 
 	if err != nil {
-		return sonolus.LevelData{}, fmt.Errorf("サーバーに接続できませんでした。（%s）", err)
+		return sonolus.LevelData{}, fmt.Errorf("couldn't connect to server. (%s)", err)
 	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != 200 {
-		return sonolus.LevelData{}, fmt.Errorf("譜面データが見つかりませんでした。（%d）", resp.StatusCode)
+		return sonolus.LevelData{}, fmt.Errorf("no chart data was found. (%d) ", resp.StatusCode)
 	}
 
 	var data sonolus.LevelData
 	gzipReader, err := gzip.NewReader(resp.Body)
 	if err != nil {
-		return sonolus.LevelData{}, fmt.Errorf("譜面データの読み込みに失敗しました。（%s）", err)
+		return sonolus.LevelData{}, fmt.Errorf("failed to load chart data. (%s)", err)
 	}
 
 	err = json.NewDecoder(gzipReader).Decode(&data)
 
 	if err != nil {
-		return sonolus.LevelData{}, fmt.Errorf("譜面データの読み込みに失敗しました。（%s）", err)
+		return sonolus.LevelData{}, fmt.Errorf("failed to load chart data. (%s)", err)
 	}
 
 	return data, nil
@@ -125,26 +125,26 @@ func DownloadCover(source Source, level sonolus.LevelInfo, destPath string) erro
 	url, err := sonolus.JoinUrl("https://"+source.Host, level.Cover.Url)
 
 	if err != nil {
-		return fmt.Errorf("URLの解析に失敗しました。（%s）", err)
+		return fmt.Errorf("failed to parse URL. (%s)", err)
 	}
 
 	resp, err := http.Get(url)
 
 	if err != nil {
-		return fmt.Errorf("サーバーに接続できませんでした。（%s）", err)
+		return fmt.Errorf("couldn't connect to server. (%s)", err)
 	}
 
 	defer resp.Body.Close()
 
 	if resp.StatusCode != 200 {
-		return fmt.Errorf("ジャケットが見つかりませんでした。（%d）", resp.StatusCode)
+		return fmt.Errorf("cover not found. (%d)", resp.StatusCode)
 	}
 
 	os.MkdirAll(destPath, 0755)
 	imageData, _, err := image.Decode(resp.Body)
 
 	if err != nil {
-		return fmt.Errorf("ジャケットの読み込みに失敗しました。（%s）", err)
+		return fmt.Errorf("failed to load cover. (%s)", err)
 	}
 
 	// 画像のリサイズ
@@ -156,7 +156,7 @@ func DownloadCover(source Source, level sonolus.LevelInfo, destPath string) erro
 	file, err := os.Create(path.Join(destPath, "cover.png"))
 
 	if err != nil {
-		return fmt.Errorf("ファイルの作成に失敗しました。（%s）", err)
+		return fmt.Errorf("failed to create file. (%s)", err)
 	}
 
 	defer file.Close()
@@ -164,7 +164,7 @@ func DownloadCover(source Source, level sonolus.LevelInfo, destPath string) erro
 	err = png.Encode(file, newImage)
 
 	if err != nil {
-		return fmt.Errorf("ファイルの書き込みに失敗しました。（%s）", err)
+		return fmt.Errorf("failed to write file. (%s)", err)
 	}
 
 	return nil
@@ -181,19 +181,19 @@ func DownloadBackground(source Source, level sonolus.LevelInfo, destPath string)
 	resp, err := http.Get(backgroundUrl)
 
 	if err != nil {
-		return fmt.Errorf("サーバーに接続できませんでした。（%s）", err)
+		return fmt.Errorf("couldn't connect to server. (%s)", err)
 	}
 
 	defer resp.Body.Close()
 
 	if resp.StatusCode != 200 {
-		return fmt.Errorf("背景が見つかりませんでした。（%d）", resp.StatusCode)
+		return fmt.Errorf("background not found. (%d)", resp.StatusCode)
 	}
 
 	file, err := os.Create(path.Join(destPath, "background.png"))
 
 	if err != nil {
-		return fmt.Errorf("ファイルの作成に失敗しました。（%s）", err)
+		return fmt.Errorf("failed to create file (%s)", err)
 	}
 
 	defer file.Close()
@@ -201,7 +201,7 @@ func DownloadBackground(source Source, level sonolus.LevelInfo, destPath string)
 	io.Copy(file, resp.Body)
 
 	if err != nil {
-		return fmt.Errorf("ファイルの書き込みに失敗しました。（%s）", err)
+		return fmt.Errorf("failed to write file. (%s)", err)
 	}
 
 	return nil

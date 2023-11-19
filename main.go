@@ -101,7 +101,7 @@ func origMain(isOptionSpecified bool) {
 	formattedOutDir := filepath.Join(cwd, strings.Replace(outDir, "_chartId_", chartId, -1))
 	fmt.Printf("Output path: %s\n", color.CyanString(filepath.Dir(formattedOutDir)))
 
-	fmt.Print("Downloading jacket... ")
+	fmt.Print("Downloading cover... ")
 	err = pjsekaioverlay.DownloadCover(chartSource, chart, formattedOutDir)
 	if err != nil {
 		fmt.Println(color.RedString(fmt.Sprintf("Failed：%s", err.Error())))
@@ -195,11 +195,9 @@ func origMain(isOptionSpecified bool) {
 		artists_slice = strings.Split(chart.Artists, " / ")
 	}
 
-	var artists string
+	artists := fmt.Sprintf("作詞：？    作曲：%s    編曲：？\r\nVo：%s   譜面作成：%s", artists_slice[0], artists_slice[1], chart.Author)
 	if enUI {
 		artists = fmt.Sprintf("Lyrics: ?    Music: %s    Arrangement: ?\r\nVocals: %s   Charter: %s", artists_slice[0], artists_slice[1], chart.Author)
-	} else {
-		artists = fmt.Sprintf("作詞：？    作曲：%s    編曲：？\r\nVo：%s   譜面作成：%s", artists_slice[0], artists_slice[1], chart.Author)
 	}
 
 	err = pjsekaioverlay.WriteExoFiles(assets, formattedOutDir, chart.Title, artists)
