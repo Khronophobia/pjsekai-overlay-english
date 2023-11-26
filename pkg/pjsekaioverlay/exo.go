@@ -51,7 +51,7 @@ func WriteExoFiles(assets string, destDir string, title string, description stri
 			continue
 		}
 		if !strings.Contains(replacedExo, mapping[i-1]) {
-			panic(fmt.Sprintf("exoファイルの生成に失敗しました（%sが見つかりません）", mapping[i-1]))
+			panic(fmt.Sprintf("failed to generate exo file (%s not found)", mapping[i-1]))
 		}
 		replacedExo = strings.ReplaceAll(replacedExo, mapping[i-1], mapping[i])
 	}
@@ -59,12 +59,12 @@ func WriteExoFiles(assets string, destDir string, title string, description stri
 	encodedExo, err := io.ReadAll(transform.NewReader(
 		strings.NewReader(replacedExo), japanese.ShiftJIS.NewEncoder()))
 	if err != nil {
-		return fmt.Errorf("エンコードに失敗しました（%w）", err)
+		return fmt.Errorf("encoding failed (%w)", err)
 	}
 	if err := os.WriteFile(filepath.Join(destDir, "main.exo"),
 		encodedExo,
 		0644); err != nil {
-		return fmt.Errorf("ファイルの書き込みに失敗しました（%w）", err)
+		return fmt.Errorf("failed to write file (%w)", err)
 	}
 
 	return nil
