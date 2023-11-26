@@ -13,16 +13,16 @@ layer=1
 overlay=1
 camera=0
 [0.0]
-_name=画像ファイル
+_name=Image file
 file={dist}\background.png
 [0.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0
 Y=0.0
 Z=0.0
-拡大率=100
-透明度=0.0
-回転=0.00
+Zoom%=100
+Clearness=0.0
+Rotation=0.00
 blend=0
 [1]
 start=1
@@ -31,21 +31,21 @@ layer=2
 overlay=1
 camera=0
 [1.0]
-_name=図形
-サイズ=100
-縦横比=0.0
-ライン幅=4000
+_name=Graphic
+Size=100
+rAspect=0.0
+Line width=4000
 type=0
 color=645a96
 name=
 [1.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0
 Y=0.0
 Z=0.0
-拡大率=100.00
-透明度=20.0
-回転=0.00
+Zoom%=100.00
+Clearness=20.0
+Rotation=0.00
 blend=0
 [2]
 start=311
@@ -54,20 +54,20 @@ layer=2
 overlay=1
 camera=1
 [2.0]
-_name=グループ制御
+_name=Group control
 X=0.0
 Y=0.0
 Z=0.0
-拡大率=100.00
-X軸回転=0.00
-Y軸回転=0.00
-Z軸回転=0.00
-上位グループ制御の影響を受ける=0
-同じグループのオブジェクトを対象にする=0
+Zoom%=100.00
+X-Spin=0.00
+Y-Spin=0.00
+Z-Spin=0.00
+Affected by the upper group control=0
+Apply to objects in the same group=0
 range=10
 [2.1]
-_name=透明度
-透明度=100.0,0.0,1
+_name=Clearness
+Clearness=100.0,0.0,1
 [3]
 start=1
 end=118
@@ -75,16 +75,16 @@ layer=3
 overlay=1
 camera=0
 [3.0]
-_name=画像ファイル
+_name=Image file
 file={assets}\start_grad.png
 [3.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0,0.0,1
 Y=734.0,0.0,1
 Z=0.0,0.0,1
-拡大率=100.00
-透明度=90.0
-回転=0.00
+Zoom%=100.00
+Clearness=90.0
+Rotation=0.00
 blend=0
 [4]
 start=119
@@ -93,16 +93,16 @@ layer=3
 overlay=1
 camera=0
 [4.0]
-_name=画像ファイル
+_name=Image file
 file={assets}\start_grad.png
 [4.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0,0.0,1
 Y=734.0,0.0,1
 Z=0.0,0.0,1
-拡大率=100.00
-透明度=90.0
-回転=0.00
+Zoom%=100.00
+Clearness=90.0
+Rotation=0.00
 blend=0
 [5]
 start=237
@@ -111,16 +111,16 @@ layer=3
 overlay=1
 camera=0
 [5.0]
-_name=画像ファイル
+_name=Image file
 file={assets}\start_grad.png
 [5.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0,0.0,1
 Y=734.0,269.8,1
 Z=0.0,0.0,1
-拡大率=100.00
-透明度=90.0
-回転=0.00
+Zoom%=100.00
+Clearness=90.0
+Rotation=0.00
 blend=0
 [6]
 start=311
@@ -130,20 +130,20 @@ group=17
 overlay=1
 camera=0
 [6.0]
-_name=動画ファイル
-再生位置=393
-再生速度=0.0,0.0,3
-ループ再生=0
-アルファチャンネルを読み込む=0
+_name=Video file
+Playback position=393
+vPlay=0.0,0.0,3
+Loop playback=0
+Import alpha channel=0
 file=
 [6.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0
 Y=0.0
 Z=0.0
-拡大率=96.00
-透明度=0.0
-回転=0.00
+Zoom%=96.00
+Clearness=0.0
+Rotation=0.00
 blend=0
 [7]
 start=407
@@ -154,19 +154,19 @@ overlay=1
 camera=0
 chain=1
 [7.0]
-_name=動画ファイル
-再生位置=393
-再生速度=0.0,100.0,3
-ループ再生=0
-アルファチャンネルを読み込む=0
+_name=Video file
+Playback position=393
+vPlay=0.0,100.0,3
+Loop playback=0
+Import alpha channel=0
 [7.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0
 Y=0.0
 Z=0.0
-拡大率=96.00
-透明度=0.0
-回転=0.00
+Zoom%=96.00
+Clearness=0.0
+Rotation=0.00
 [8]
 start=467
 end=8933
@@ -176,19 +176,19 @@ overlay=1
 camera=0
 chain=1
 [8.0]
-_name=動画ファイル
-再生位置=393
-再生速度=100.0,0.0,3
-ループ再生=0
-アルファチャンネルを読み込む=0
+_name=Video file
+Playback position=393
+vPlay=100.0,0.0,3
+Loop playback=0
+Import alpha channel=0
 [8.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0
 Y=0.0
 Z=0.0
-拡大率=96.00
-透明度=0.0
-回転=0.00
+Zoom%=96.00
+Clearness=0.0
+Rotation=0.00
 [9]
 start=8934
 end=9209
@@ -198,19 +198,19 @@ overlay=1
 camera=0
 chain=1
 [9.0]
-_name=動画ファイル
-再生位置=393
-再生速度=0.0,100.0,3
-ループ再生=0
-アルファチャンネルを読み込む=0
+_name=Video file
+Playback position=393
+vPlay=0.0,100.0,3
+Loop playback=0
+Import alpha channel=0
 [9.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0
 Y=0.0
 Z=0.0
-拡大率=96.00
-透明度=0.0
-回転=0.00
+Zoom%=96.00
+Clearness=0.0
+Rotation=0.00
 [10]
 start=1
 end=280
@@ -219,16 +219,16 @@ overlay=1
 clipping=1
 camera=0
 [10.0]
-_name=画像ファイル
+_name=Image file
 file={dist}\background.png
 [10.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0
 Y=0.0
 Z=0.0
-拡大率=100
-透明度=0.0
-回転=0.00
+Zoom%=100
+Clearness=0.0
+Rotation=0.00
 blend=0
 [11]
 start=311
@@ -238,16 +238,16 @@ group=17
 overlay=1
 audio=1
 [11.0]
-_name=音声ファイル
-再生位置=0.00
-再生速度=100.0
-ループ再生=0
-動画ファイルと連携=1
+_name=Audio file
+Playback position=0.00
+vPlay=100.0
+Loop playback=0
+Sync with video files=1
 file=
 [11.1]
-_name=標準再生
-音量=100.0
-左右=0.0
+_name=Standard playback
+Volume=100.0
+Left-Right=0.0
 [12]
 start=1
 end=112
@@ -255,16 +255,16 @@ layer=5
 overlay=1
 camera=1
 [12.0]
-_name=グループ制御
+_name=Group control
 X=25.0,0.0,15@減速@加減速TRA,2
 Y=-25.0,0.0,15@減速@加減速TRA,2
 Z=0.0,0.0,15@減速@加減速TRA,2
-拡大率=100.00
-X軸回転=0.00
-Y軸回転=0.00
-Z軸回転=0.00
-上位グループ制御の影響を受ける=0
-同じグループのオブジェクトを対象にする=0
+Zoom%=100.00
+X-Spin=0.00
+Y-Spin=0.00
+Z-Spin=0.00
+Affected by the upper group control=0
+Apply to objects in the same group=0
 range=3
 [13]
 start=281
@@ -273,20 +273,20 @@ layer=5
 overlay=1
 camera=1
 [13.0]
-_name=グループ制御
+_name=Group control
 X=0.0
 Y=0.0
 Z=0.0
-拡大率=100.00
-X軸回転=0.00
-Y軸回転=0.00
-Z軸回転=0.00
-上位グループ制御の影響を受ける=0
-同じグループのオブジェクトを対象にする=0
+Zoom%=100.00
+X-Spin=0.00
+Y-Spin=0.00
+Z-Spin=0.00
+Affected by the upper group control=0
+Apply to objects in the same group=0
 range=7
 [13.1]
-_name=透明度
-透明度=0.0,100.0,1
+_name=Clearness
+Clearness=0.0,100.0,1
 [14]
 start=1
 end=310
@@ -295,16 +295,16 @@ group=20
 overlay=1
 camera=0
 [14.0]
-_name=画像ファイル
+_name=Image file
 file={assets}\master_bg.png
 [14.1]
-_name=標準描画
+_name=Standard drawing
 X=-471.0
 Y=192.0
 Z=0.0
-拡大率=100.00
-透明度=0.0
-回転=0.00
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
 blend=0
 [15]
 start=1
@@ -314,16 +314,16 @@ group=19
 overlay=1
 camera=0
 [15.0]
-_name=画像ファイル
+_name=Image file
 file={assets}\append_bg.png
 [15.1]
-_name=標準描画
+_name=Standard drawing
 X=-471.0
 Y=192.0
 Z=0.0
-拡大率=100.00
-透明度=0.0
-回転=0.00
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
 blend=0
 [16]
 start=1
@@ -333,12 +333,12 @@ group=19
 overlay=1
 camera=0
 [16.0]
-_name=テキスト
-サイズ=21
-表示速度=0.0
-文字毎に個別オブジェクト=0
-移動座標上に表示する=0
-自動スクロール=0
+_name=Text
+Size=21
+vDisplay=0.0
+1char1obj=0
+Show on motion coordinate=0
+Automatic scrolling=0
 B=0
 I=0
 type=0
@@ -354,13 +354,13 @@ color2=000000
 font=FOT-ロダンNTLG Pro EB
 text={text:difficulty}
 [16.1]
-_name=標準描画
+_name=Standard drawing
 X=-600.0
 Y=324.0
 Z=0.0
-拡大率=100.00
-透明度=0.0
-回転=0.00
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
 blend=0
 [17]
 start=311
@@ -370,7 +370,7 @@ group=18
 overlay=1
 camera=0
 [17.0]
-_name=カスタムオブジェクト
+_name=Custom object
 track0=216.00
 track1=1.00
 track2=0.00
@@ -381,13 +381,13 @@ filter=0
 name=設定@pjsekai-overlay
 param=file="{dist}\\data.ped"
 [17.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0
 Y=0.0
 Z=0.0
-拡大率=100.00
-透明度=0.0
-回転=0.01
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.01
 blend=0
 [18]
 start=1
@@ -396,12 +396,12 @@ layer=9
 overlay=1
 camera=0
 [18.0]
-_name=テキスト
-サイズ=24
-表示速度=0.0
-文字毎に個別オブジェクト=0
-移動座標上に表示する=0
-自動スクロール=0
+_name=Text
+Size=24
+vDisplay=0.0
+1char1obj=0
+Show on motion coordinate=0
+Automatic scrolling=0
 B=0
 I=0
 type=0
@@ -417,13 +417,13 @@ color2=000000
 font=FOT-ロダンNTLG Pro EB
 text={text:title}
 [18.1]
-_name=標準描画
+_name=Standard drawing
 X=-281.0
 Y=215.0
 Z=0.0
-拡大率=100.00
-透明度=0.0
-回転=0.00
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
 blend=0
 [19]
 start=311
@@ -433,16 +433,16 @@ group=18
 overlay=1
 camera=0
 [19.0]
-_name=画像ファイル
+_name=Image file
 file={assets}\life.png
 [19.1]
-_name=標準描画
+_name=Standard drawing
 X=474.0
 Y=-316.0
 Z=0.0
-拡大率=100.00
-透明度=0.0
-回転=0.00
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
 blend=0
 [20]
 start=1
@@ -451,12 +451,12 @@ layer=10
 overlay=1
 camera=0
 [20.0]
-_name=テキスト
-サイズ=18
-表示速度=0.0
-文字毎に個別オブジェクト=0
-移動座標上に表示する=0
-自動スクロール=0
+_name=Text
+Size=18
+vDisplay=0.0
+1char1obj=0
+Show on motion coordinate=0
+Automatic scrolling=0
 B=0
 I=0
 type=0
@@ -472,13 +472,13 @@ color2=000000
 font=FOT-ロダンNTLG Pro DB
 text={text:description}
 [20.1]
-_name=標準描画
+_name=Standard drawing
 X=-282.0
 Y=243.0
 Z=0.0
-拡大率=100.00
-透明度=0.0
-回転=0.00
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
 blend=0
 [21]
 start=311
@@ -488,7 +488,7 @@ group=18
 overlay=1
 camera=0
 [21.0]
-_name=カスタムオブジェクト
+_name=Custom object
 track0=0.00
 track1=0.00
 track2=0.00
@@ -499,13 +499,13 @@ filter=0
 name=スコア@pjsekai-overlay
 param=
 [21.1]
-_name=標準描画
+_name=Standard drawing
 X=-389.0
 Y=-312.0
 Z=0.0
-拡大率=100.00
-透明度=0.0
-回転=0.00
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
 blend=0
 [22]
 start=311
@@ -515,7 +515,7 @@ group=18
 overlay=1
 camera=0
 [22.0]
-_name=カスタムオブジェクト
+_name=Custom object
 track0=0.00
 track1=0.00
 track2=0.00
@@ -526,13 +526,13 @@ filter=0
 name=コンボ@pjsekai-overlay
 param=
 [22.1]
-_name=標準描画
+_name=Standard drawing
 X=450.0
 Y=-30.0
 Z=0.0
-拡大率=100.00
-透明度=0.0
-回転=0.00
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
 blend=0
 [23]
 start=1
@@ -541,16 +541,16 @@ layer=12
 overlay=1
 camera=0
 [23.0]
-_name=画像ファイル
+_name=Image file
 file={dist}\cover.png
 [23.1]
-_name=標準描画
+_name=Standard drawing
 X=-442.0
 Y=162.0
 Z=0.0
-拡大率=52.50
-透明度=0.0
-回転=0.00
+Zoom%=52.50
+Clearness=0.0
+Rotation=0.00
 blend=0
 [24]
 start=311
@@ -560,7 +560,7 @@ group=18
 overlay=1
 camera=0
 [24.0]
-_name=カスタムオブジェクト
+_name=Custom object
 track0=0.00
 track1=0.00
 track2=0.00
@@ -571,13 +571,13 @@ filter=0
 name=判定@pjsekai-overlay
 param=
 [24.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0
 Y=85.0
 Z=0.0
-拡大率=100.00
-透明度=0.0
-回転=0.00
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
 blend=0
 [25]
 start=8934
@@ -586,21 +586,21 @@ layer=13
 overlay=1
 camera=0
 [25.0]
-_name=図形
-サイズ=100
-縦横比=0.0
-ライン幅=4000
+_name=Graphic
+Size=100
+rAspect=0.0
+Line width=4000
 type=0
 color=000000
 name=
 [25.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0
 Y=-2.0
 Z=0.0
-拡大率=200.00
-透明度=50.0,50.0,1
-回転=0.00
+Zoom%=200.00
+Clearness=50.0,50.0,1
+Rotation=0.00
 blend=0
 [26]
 start=8934
@@ -610,14 +610,14 @@ group=14
 overlay=1
 camera=0
 [26.0]
-_name=動画ファイル
-再生位置=1
-再生速度=100.0
-ループ再生=0
-アルファチャンネルを読み込む=0
+_name=Video file
+Playback position=1
+vPlay=100.0
+Loop playback=0
+Import alpha channel=0
 file={assets}\ap.mp4
 [26.1]
-_name=アニメーション効果
+_name=Animation effect
 track0=0.00
 track1=0.00
 track2=0.00
@@ -628,13 +628,13 @@ filter=0
 name=unmult
 param=
 [26.2]
-_name=標準描画
+_name=Standard drawing
 X=0.0
 Y=0.0
 Z=0.0
-拡大率=100.00
-透明度=0.0
-回転=0.00
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
 blend=0
 [27]
 start=8934
@@ -644,16 +644,16 @@ group=14
 overlay=1
 audio=1
 [27.0]
-_name=音声ファイル
-再生位置=0.00
-再生速度=100.0
-ループ再生=0
-動画ファイルと連携=1
+_name=Audio file
+Playback position=0.00
+vPlay=100.0
+Loop playback=0
+Sync with video files=1
 file={assets}\ap.mp4
 [27.1]
-_name=標準再生
-音量=300.0
-左右=0.0
+_name=Standard playback
+Volume=300.0
+Left-Right=0.0
 [28]
 start=9146
 end=9190
@@ -661,20 +661,20 @@ layer=16
 overlay=1
 camera=1
 [28.0]
-_name=グループ制御
+_name=Group control
 X=0.0
 Y=0.0
 Z=0.0
-拡大率=100.00
-X軸回転=0.00
-Y軸回転=0.00
-Z軸回転=0.00
-上位グループ制御の影響を受ける=1
-同じグループのオブジェクトを対象にする=0
+Zoom%=100.00
+X-Spin=0.00
+Y-Spin=0.00
+Z-Spin=0.00
+Affected by the upper group control=1
+Apply to objects in the same group=0
 range=1
 [28.1]
-_name=透明度
-透明度=100.0,0.0,1
+_name=Clearness
+Clearness=100.0,0.0,1
 [29]
 start=9146
 end=9255
@@ -683,19 +683,19 @@ group=4
 overlay=1
 camera=0
 [29.0]
-_name=図形
-サイズ=100
-縦横比=0.0
-ライン幅=4000
+_name=Graphic
+Size=100
+rAspect=0.0
+Line width=4000
 type=0
 color=000000
 name=
 [29.1]
-_name=標準描画
+_name=Standard drawing
 X=0.0
 Y=-2.0
 Z=0.0
-拡大率=200.00
-透明度=0.0
-回転=0.00
+Zoom%=200.00
+Clearness=0.0
+Rotation=0.00
 blend=0
