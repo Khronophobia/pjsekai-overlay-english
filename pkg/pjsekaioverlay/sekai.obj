@@ -1,10 +1,10 @@
 --version: {version}
 --enversion: {enversion}
 
-@設定
+@Root
 --file:
---track0:オフセット,-10000,10000,0,1
---track1:キャッシュ,0,1,1,1
+--track0:Offset,-10000,10000,0,1
+--track1:Cache,0,1,1,1
 
 if obj.track1 ~= 1 or not PED_DATA or PED_DATA.file ~= file then
   debug_print("[pjsekai-overlay] Loading ped data in " .. file)
@@ -104,7 +104,7 @@ else
   PED_DATA.version_status = "ng"
 end
 ----------------------------------------------------------------
-@スコア
+@Score
 
 if PED_DATA and PED_DATA.version_status == "ok" then
   obj.setoption("drawtarget", "tempbuffer", 357, 18)
@@ -208,7 +208,7 @@ if PED_DATA and PED_DATA.version_status == "ok" then
   obj.copybuffer("obj", "tmp")
 end
 ----------------------------------------------------------------
-@コンボ
+@Combo
 if PED_DATA and PED_DATA.version_status == "ok" then
   local ap_alpha = (math.sin(obj.time * math.pi) + 1) * (1 / 2)
   if ap_alpha > 1 then
@@ -272,7 +272,7 @@ if PED_DATA and PED_DATA.version_status == "ok" then
   end
 end
 ----------------------------------------------------------------
-@判定
+@Judgement indicator
 if PED_DATA and PED_DATA.version_status == "ok" then
   if PED_DATA.current.time > 0 then
     local progress = ((obj.frame - OFFSET) - (PED_DATA.current.time * obj.framerate))

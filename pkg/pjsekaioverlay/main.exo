@@ -378,7 +378,7 @@ track3=0.00
 check0=0
 type=0
 filter=0
-name=設定@pjsekai-overlay
+name=Root@pjsekai-overlay-en
 param=file="{dist}\\data.ped"
 [17.1]
 _name=Standard drawing
@@ -496,7 +496,7 @@ track3=0.00
 check0=0
 type=0
 filter=0
-name=スコア@pjsekai-overlay
+name=Score@pjsekai-overlay-en
 param=
 [21.1]
 _name=Standard drawing
@@ -523,7 +523,7 @@ track3=0.00
 check0=0
 type=0
 filter=0
-name=コンボ@pjsekai-overlay
+name=Combo@pjsekai-overlay-en
 param=
 [22.1]
 _name=Standard drawing
@@ -568,7 +568,7 @@ track3=0.00
 check0=0
 type=0
 filter=0
-name=判定@pjsekai-overlay
+name=Judgement indicator@pjsekai-overlay-en
 param=
 [24.1]
 _name=Standard drawing

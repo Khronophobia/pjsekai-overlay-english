@@ -42,7 +42,7 @@ func TryInstallObject() bool {
 
 	os.MkdirAll(filepath.Join(exeditRoot, "script"), 0755)
 
-	var sekaiObjPath = filepath.Join(exeditRoot, "script", "@pjsekai-overlay.obj")
+	var sekaiObjPath = filepath.Join(exeditRoot, "script", "@pjsekai-overlay-en.obj")
 	if _, err := os.Stat(sekaiObjPath); err == nil {
 		var sekaiObjFile, _ = os.OpenFile(sekaiObjPath, os.O_RDONLY, 0755)
 		defer sekaiObjFile.Close()
