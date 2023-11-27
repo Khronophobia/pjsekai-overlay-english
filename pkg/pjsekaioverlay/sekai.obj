@@ -111,7 +111,7 @@ if PED_DATA and PED_DATA.version_status == "ok" then
   obj.load("image", PED_DATA.path.."/score/bar.png")
   obj.draw(0, 0, 0, 1)
   obj.setoption("blend", "alpha_sub")
-  obj.load("figure", "背景")
+  obj.load("figure", "Background")
   obj.drawpoly(
     357 * (PED_DATA.current.width - 0.5), -9, 0,
     357, -9, 0,
