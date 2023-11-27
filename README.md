@@ -32,6 +32,10 @@ PJSekai-style video creation tool:
   https://github.com/sevenc-nanashi/pjsekai-overlay
   作成：名無し｡ （ https://sevenc7c.com ）
 ```
+Optionally, you can also include this line:
+```
+For English users: https://github.com/Khronophobia/pjsekai-overlay-english
+```
 
 ## Original JP Description
 Read the original japanese description [here](README.original.md).
