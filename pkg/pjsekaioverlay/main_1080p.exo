@@ -1,0 +1,701 @@
+[exedit]
+width=1920
+height=1080
+rate=60
+scale=1
+length=9255
+audio_rate=44100
+audio_ch=2
+[0]
+start=1
+end=406
+layer=1
+overlay=1
+camera=0
+[0.0]
+_name=Image file
+file={dist}\background.png
+[0.1]
+_name=Standard drawing
+X=0.0
+Y=0.0
+Z=0.0
+Zoom%=150.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[1]
+start=1
+end=310
+layer=2
+overlay=1
+camera=0
+[1.0]
+_name=Graphic
+Size=100
+rAspect=0.0
+Line width=4000
+type=0
+color=645a96
+name=
+[1.1]
+_name=Standard drawing
+X=0.0
+Y=0.0
+Z=0.0
+Zoom%=100.00
+Clearness=20.0
+Rotation=0.00
+blend=0
+[2]
+start=311
+end=406
+layer=2
+overlay=1
+camera=1
+[2.0]
+_name=Group control
+X=0.0
+Y=0.0
+Z=0.0
+Zoom%=100.00
+X-Spin=0.00
+Y-Spin=0.00
+Z-Spin=0.00
+Affected by the upper group control=0
+Apply to objects in the same group=0
+range=10
+[2.1]
+_name=Clearness
+Clearness=100.0,0.0,1
+[3]
+start=1
+end=118
+layer=3
+overlay=1
+camera=0
+[3.0]
+_name=Image file
+file={assets}\start_grad.png
+[3.1]
+_name=Standard drawing
+X=0.0,0.0,1
+Y=1101.0,0.0,1
+Z=0.0,0.0,1
+Zoom%=150.00
+Clearness=90.0
+Rotation=0.00
+blend=0
+[4]
+start=119
+end=236
+layer=3
+overlay=1
+camera=0
+[4.0]
+_name=Image file
+file={assets}\start_grad.png
+[4.1]
+_name=Standard drawing
+X=0.0,0.0,1
+Y=1101.0,0.0,1
+Z=0.0,0.0,1
+Zoom%=150.00
+Clearness=90.0
+Rotation=0.00
+blend=0
+[5]
+start=237
+end=280
+layer=3
+overlay=1
+camera=0
+[5.0]
+_name=Image file
+file={assets}\start_grad.png
+[5.1]
+_name=Standard drawing
+X=0.0,0.0,1
+Y=1101.0,404.7,1
+Z=0.0,0.0,1
+Zoom%=150.00
+Clearness=90.0
+Rotation=0.00
+blend=0
+[6]
+start=311
+end=406
+layer=3
+group=1
+overlay=1
+camera=0
+[6.0]
+_name=Video file
+Playback position=393
+vPlay=0.0,0.0,3
+Loop playback=0
+Import alpha channel=0
+file=
+[6.1]
+_name=Standard drawing
+X=0.0
+Y=0.0
+Z=0.0
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[7]
+start=407
+end=466
+layer=3
+group=1
+overlay=1
+camera=0
+chain=1
+[7.0]
+_name=Video file
+Playback position=393
+vPlay=0.0,100.0,3
+Loop playback=0
+Import alpha channel=0
+[7.1]
+_name=Standard drawing
+X=0.0
+Y=0.0
+Z=0.0
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
+[8]
+start=467
+end=8933
+layer=3
+group=1
+overlay=1
+camera=0
+chain=1
+[8.0]
+_name=Video file
+Playback position=393
+vPlay=100.0,0.0,3
+Loop playback=0
+Import alpha channel=0
+[8.1]
+_name=Standard drawing
+X=0.0
+Y=0.0
+Z=0.0
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
+[9]
+start=8934
+end=9209
+layer=3
+group=1
+overlay=1
+camera=0
+chain=1
+[9.0]
+_name=Video file
+Playback position=393
+vPlay=0.0,100.0,3
+Loop playback=0
+Import alpha channel=0
+[9.1]
+_name=Standard drawing
+X=0.0
+Y=0.0
+Z=0.0
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
+[10]
+start=1
+end=280
+layer=4
+overlay=1
+clipping=1
+camera=0
+[10.0]
+_name=Image file
+file={dist}\background.png
+[10.1]
+_name=Standard drawing
+X=0.0
+Y=0.0
+Z=0.0
+Zoom%=150.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[11]
+start=311
+end=9209
+layer=4
+group=1
+overlay=1
+audio=1
+[11.0]
+_name=Audio file
+Playback position=0.00
+vPlay=100.0
+Loop playback=0
+Sync with video files=1
+file=
+[11.1]
+_name=Standard playback
+Volume=100.0
+Left-Right=0.0
+[12]
+start=1
+end=112
+layer=5
+overlay=1
+camera=1
+[12.0]
+_name=Group control
+X=37.5,0.0,15@Tween
+Y=-37.5,0.0,15@Tween
+Z=0.0,0.0,15@Tween
+Zoom%=100.00
+X-Spin=0.00
+Y-Spin=0.00
+Z-Spin=0.00
+Affected by the upper group control=0
+Apply to objects in the same group=0
+range=3
+[13]
+start=281
+end=310
+layer=5
+overlay=1
+camera=1
+[13.0]
+_name=Group control
+X=0.0
+Y=0.0
+Z=0.0
+Zoom%=100.00
+X-Spin=0.00
+Y-Spin=0.00
+Z-Spin=0.00
+Affected by the upper group control=0
+Apply to objects in the same group=0
+range=7
+[13.1]
+_name=Clearness
+Clearness=0.0,100.0,1
+[14]
+start=1
+end=310
+layer=6
+group=2
+overlay=1
+camera=0
+[14.0]
+_name=Image file
+file={assets}\master_bg.png
+[14.1]
+_name=Standard drawing
+X=-706.5
+Y=288.0
+Z=0.0
+Zoom%=150.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[15]
+start=1
+end=310
+layer=7
+group=3
+overlay=1
+camera=0
+[15.0]
+_name=Image file
+file={assets}\append_bg.png
+[15.1]
+_name=Standard drawing
+X=-706.5
+Y=288.0
+Z=0.0
+Zoom%=150.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[16]
+start=1
+end=310
+layer=8
+group=3
+overlay=1
+camera=0
+[16.0]
+_name=Text
+Size=32
+vDisplay=0.0
+1char1obj=0
+Show on motion coordinate=0
+Automatic scrolling=0
+B=0
+I=0
+type=0
+autoadjust=0
+soft=1
+monospace=0
+align=6
+spacing_x=0
+spacing_y=0
+precision=1
+color=ffffff
+color2=000000
+font=FOT-ロダンNTLG Pro EB
+text={text:difficulty}
+[16.1]
+_name=Standard drawing
+X=-900.0
+Y=486.0
+Z=0.0
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[17]
+start=311
+end=9209
+layer=8
+group=4
+overlay=1
+camera=0
+[17.0]
+_name=Custom object
+track0=216.00
+track1=1.00
+track2=0.00
+track3=0.00
+check0=0
+type=0
+filter=0
+name=Root@pjsekai-overlay-en
+param=file="{dist}\\data.ped"
+[17.1]
+_name=Standard drawing
+X=0.0
+Y=0.0
+Z=0.0
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.01
+blend=0
+[18]
+start=1
+end=310
+layer=9
+overlay=1
+camera=0
+[18.0]
+_name=Text
+Size=36
+vDisplay=0.0
+1char1obj=0
+Show on motion coordinate=0
+Automatic scrolling=0
+B=0
+I=0
+type=0
+autoadjust=0
+soft=1
+monospace=0
+align=6
+spacing_x=4
+spacing_y=0
+precision=1
+color=ffffff
+color2=000000
+font=FOT-ロダンNTLG Pro EB
+text={text:title}
+[18.1]
+_name=Standard drawing
+X=-421.5
+Y=322.5
+Z=0.0
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[19]
+start=311
+end=9209
+layer=9
+group=4
+overlay=1
+camera=0
+[19.0]
+_name=Image file
+file={assets}\life.png
+[19.1]
+_name=Standard drawing
+X=711.0
+Y=-474.0
+Z=0.0
+Zoom%=150.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[20]
+start=1
+end=310
+layer=10
+overlay=1
+camera=0
+[20.0]
+_name=Text
+Size=27
+vDisplay=0.0
+1char1obj=0
+Show on motion coordinate=0
+Automatic scrolling=0
+B=0
+I=0
+type=0
+autoadjust=0
+soft=1
+monospace=0
+align=0
+spacing_x=0
+spacing_y=8
+precision=1
+color=ffffff
+color2=000000
+font=FOT-ロダンNTLG Pro DB
+text={text:description}
+[20.1]
+_name=Standard drawing
+X=-423.0
+Y=364.5
+Z=0.0
+Zoom%=100.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[21]
+start=311
+end=9209
+layer=10
+group=4
+overlay=1
+camera=0
+[21.0]
+_name=Custom object
+track0=0.00
+track1=0.00
+track2=0.00
+track3=0.00
+check0=0
+type=0
+filter=0
+name=Score@pjsekai-overlay-en
+param=
+[21.1]
+_name=Standard drawing
+X=-583.5
+Y=-468.0
+Z=0.0
+Zoom%=150.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[22]
+start=311
+end=9209
+layer=11
+group=4
+overlay=1
+camera=0
+[22.0]
+_name=Custom object
+track0=0.00
+track1=0.00
+track2=0.00
+track3=0.00
+check0=0
+type=0
+filter=0
+name=Combo@pjsekai-overlay-en
+param=
+[22.1]
+_name=Standard drawing
+X=675.0
+Y=-45.0
+Z=0.0
+Zoom%=150.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[23]
+start=1
+end=310
+layer=12
+overlay=1
+camera=0
+[23.0]
+_name=Image file
+file={dist}\cover.png
+[23.1]
+_name=Standard drawing
+X=-663.0
+Y=243.0
+Z=0.0
+Zoom%=78.75
+Clearness=0.0
+Rotation=0.00
+blend=0
+[24]
+start=311
+end=9209
+layer=12
+group=4
+overlay=1
+camera=0
+[24.0]
+_name=Custom object
+track0=0.00
+track1=0.00
+track2=0.00
+track3=0.00
+check0=0
+type=0
+filter=0
+name=Judgement indicator@pjsekai-overlay-en
+param=
+[24.1]
+_name=Standard drawing
+X=0.0
+Y=127.5
+Z=0.0
+Zoom%=150.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[25]
+start=8934
+end=9209
+layer=13
+overlay=1
+camera=0
+[25.0]
+_name=Graphic
+Size=100
+rAspect=0.0
+Line width=4000
+type=0
+color=000000
+name=
+[25.1]
+_name=Standard drawing
+X=0.0
+Y=-2.0
+Z=0.0
+Zoom%=200.00
+Clearness=50.0,50.0,1
+Rotation=0.00
+blend=0
+[26]
+start=8934
+end=9209
+layer=14
+group=5
+overlay=1
+camera=0
+[26.0]
+_name=Video file
+Playback position=1
+vPlay=100.0
+Loop playback=0
+Import alpha channel=0
+file={assets}\ap.mp4
+[26.1]
+_name=Animation effect
+track0=0.00
+track1=0.00
+track2=0.00
+track3=0.00
+check0=0
+type=0
+filter=0
+name=unmult
+param=
+[26.2]
+_name=Standard drawing
+X=0.0
+Y=0.0
+Z=0.0
+Zoom%=150.00
+Clearness=0.0
+Rotation=0.00
+blend=0
+[27]
+start=8934
+end=9209
+layer=15
+group=5
+overlay=1
+audio=1
+[27.0]
+_name=Audio file
+Playback position=0.00
+vPlay=100.0
+Loop playback=0
+Sync with video files=1
+file={assets}\ap.mp4
+[27.1]
+_name=Standard playback
+Volume=300.0
+Left-Right=0.0
+[28]
+start=9146
+end=9190
+layer=16
+overlay=1
+camera=1
+[28.0]
+_name=Group control
+X=0.0
+Y=0.0
+Z=0.0
+Zoom%=100.00
+X-Spin=0.00
+Y-Spin=0.00
+Z-Spin=0.00
+Affected by the upper group control=1
+Apply to objects in the same group=0
+range=1
+[28.1]
+_name=Clearness
+Clearness=100.0,0.0,1
+[29]
+start=9146
+end=9255
+layer=17
+group=6
+overlay=1
+camera=0
+[29.0]
+_name=Graphic
+Size=100
+rAspect=0.0
+Line width=4000
+type=0
+color=000000
+name=
+[29.1]
+_name=Standard drawing
+X=0.0
+Y=-2.0
+Z=0.0
+Zoom%=200.00
+Clearness=0.0
+Rotation=0.00
+blend=0
