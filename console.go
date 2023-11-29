@@ -16,7 +16,8 @@ func Title() {
         Version: %s%s (based on JP %s)%s
         Developed by %s名無し｡(@sevenc-nanashi)%s
         Translated to English by %sKhronophobia%s
-        https://github.com/sevenc-nanashi/pjsekai-overlay
+        https://github.com/Khronophobia/pjsekai-overlay-english
+        https://github.com/sevenc-nanashi/pjsekai-overlay (original)
       %s-------------------------------------------------------------------------------%s
     `))+"\n\n",
 		RgbColorEscape(0x00afc7), ResetEscape(),
