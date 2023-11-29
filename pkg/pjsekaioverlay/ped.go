@@ -200,7 +200,7 @@ func WritePedFile(frames []PedFrame, assets string, ap bool, path string) error 
 
 	writer.Write([]byte(fmt.Sprintf("p|%s\n", assets)))
 	writer.Write([]byte(fmt.Sprintf("a|%s\n", strconv.FormatBool(ap))))
-	writer.Write([]byte(fmt.Sprintf("v|%s\n", GetVersion(Version, 0))))
+	writer.Write([]byte(fmt.Sprintf("v|%s\n", Version)))
 	writer.Write([]byte(fmt.Sprintf("u|%d\n", time.Now().Unix())))
 
 	lastScore := 0

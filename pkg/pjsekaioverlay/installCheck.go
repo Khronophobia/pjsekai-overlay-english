@@ -48,7 +48,7 @@ func TryInstallObject() bool {
 		defer sekaiObjFile.Close()
 		var sekaiObjDecoder = japanese.ShiftJIS.NewDecoder()
 		var existingSekaiObj, _ = io.ReadAll(transform.NewReader(sekaiObjFile, sekaiObjDecoder))
-		if (strings.Contains(string(existingSekaiObj), "--version: "+GetVersion(Version, 0)) && strings.Contains(string(existingSekaiObj), "--enversion: "+GetVersion(Version, 1))) && Version != "0.0.0" {
+		if (strings.Contains(string(existingSekaiObj), "--version: "+Version)) && Version != "0.0.0" {
 			return false
 		}
 	}
@@ -68,8 +68,7 @@ func TryInstallObject() bool {
 		"\r\n", "\r\n",
 		"\r", "\r\n",
 		"\n", "\r\n",
-		"{version}", GetVersion(Version, 0),
-		"{enversion}", GetVersion(Version, 1),
+		"{version}", Version,
 	).Replace(string(sekaiObj))).WriteTo(sekaiObjWriter)
 	return true
 }

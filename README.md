@@ -2,12 +2,6 @@
 
 An English translation of [pjsekai-overlay](https://github.com/sevenc-nanashi/pjsekai-overlay) by Nanashi.
 
-## About Version Numbering
-
-This fork of is denoted with two versions, JP version and EN version.
-
-JP version follows Nanashi.'s original repo and will be updated when Nanashi. updates it. EN version is for updates specifically for this fork, like translation changes.
-
 ## Usage Guide
 
 Refer to the [wiki](https://github.com/Khronophobia/pjsekai-overlay-english/wiki).

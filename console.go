@@ -13,7 +13,7 @@ func Title() {
 		strings.TrimSpace(dedent.Dedent(`
       %s== pjsekai-overlay -----------------------------------------------------------%s
         %spjsekai-overlay / プロセカ風動画作成補助ツール%s
-        Version: %s%s (EN %s)%s
+        Version: %s%s (based on JP %s)%s
         Developed by %s名無し｡(@sevenc-nanashi)%s
         Translated to English by %sKhronophobia%s
         https://github.com/sevenc-nanashi/pjsekai-overlay
@@ -21,7 +21,7 @@ func Title() {
     `))+"\n\n",
 		RgbColorEscape(0x00afc7), ResetEscape(),
 		RgbColorEscape(0x00afc7), ResetEscape(),
-		RgbColorEscape(0x0f6ea3), pjsekaioverlay.GetVersion(pjsekaioverlay.Version, 0), pjsekaioverlay.GetVersion(pjsekaioverlay.Version, 1), ResetEscape(),
+		RgbColorEscape(0x0f6ea3), pjsekaioverlay.Version, pjsekaioverlay.JPVersion, ResetEscape(),
 		RgbColorEscape(0x48b0d5), ResetEscape(),
 		RgbColorEscape(0x48b0d5), ResetEscape(),
 		RgbColorEscape(0xff5a91), ResetEscape(),
