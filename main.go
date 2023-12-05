@@ -70,7 +70,7 @@ func origMain(isOptionSpecified bool) {
 		return
 	}
 	if chart.Engine.Version != 10 {
-		fmt.Println(color.RedString(fmt.Sprintf("Failed. This engine is not supported. （version %d）", chart.Engine.Version)))
+		fmt.Println(color.RedString(fmt.Sprintf("Failed. Unsupported engine version. （version %d）", chart.Engine.Version)))
 		return
 	}
 
