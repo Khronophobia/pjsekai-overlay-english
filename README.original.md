@@ -9,8 +9,9 @@ pjsekai-overlay は、プロセカの創作譜面をプロセカ風の動画に�
 
 ## 必須事項
 
-- [AviUtl](http://spring-fragrance.mints.ne.jp/aviutl/) + [拡張編集プラグイン](http://spring-fragrance.mints.ne.jp/aviutl/) （[導入方法](https://aviutl.info/dl-innsuto-ru/)）  
+- [AviUtl](http://spring-fragrance.mints.ne.jp/aviutl/) + [拡張編集プラグイン](http://spring-fragrance.mints.ne.jp/aviutl/) （[導入方法](https://aviutl.info/dl-innsuto-ru/)）
   （強く推奨：[patch.aul](https://scrapbox.io/ePi5131/patch.aul)）
+- [AVIUtl_Unmult](https://github.com/mes51/AVIUtl_Unmult)
 - AviUtlの基本的な知識
 
 ## 動画の作り方
@@ -36,7 +37,7 @@ pjsekai-overlay は、プロセカの創作譜面をプロセカ風の動画に�
 5. 譜面 ID を入力する
    - Potato Leaves の場合は `ptlv-` を、Chart Cyanvas の場合は `chcy-` を先頭につけたまま入力してください。
 
-## 注意
+## 利用規約
 
 動画の概要欄などに、
 
