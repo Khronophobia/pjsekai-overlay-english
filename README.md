@@ -1,3 +1,7 @@
+# NO LONGER BEING UPDATED & SUPPORTED
+
+This project is no longer updated due to loss of interest. Use [this fork by TootieJin instead](https://github.com/TootieJin/pjsekai-overlay-APPEND). Guides in the wiki will stay up and may or may not be updated.
+
 # pjsekai-overlay / A program to create PJSekai-style videos (English translation)
 
 An English translation of [pjsekai-overlay](https://github.com/sevenc-nanashi/pjsekai-overlay) by Nanashi.
